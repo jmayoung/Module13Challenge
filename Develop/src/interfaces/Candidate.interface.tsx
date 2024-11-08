@@ -20,8 +20,5 @@ export interface Candidate {
     received_events_url: string;
     type: string;
     site_admin: boolean;
-    location: string;
-    email: string;
-    company: string;
   }
   
