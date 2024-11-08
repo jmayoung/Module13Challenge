@@ -8,22 +8,21 @@ import SavedCandidates from './pages/SavedCandidates.tsx';
 import ErrorPage from './pages/ErrorPage.tsx';
 import { Candidate } from './interfaces/Candidate.interface';
 
-// Load saved candidates from localStorage
-const savedCandidates: Candidate[] = JSON.parse(localStorage.getItem('potentialCandidates') || '[]');
+
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <App />,  // App wraps the main layout with Nav included
+    element: <App />,  
     errorElement: <ErrorPage />,
     children: [
       {
         index: true,
-        element: <CandidateSearch />, // Home page
+        element: <CandidateSearch />, 
       },
       {
         path: 'saved',
-        element: <SavedCandidates savedCandidates={savedCandidates} />, // Potential Candidates page
+        element: <SavedCandidates />,
       },
     ],
   },

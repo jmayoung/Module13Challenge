@@ -9,7 +9,7 @@ const SavedCandidates = () => {
     // Load saved candidates from localStorage
     const saved = JSON.parse(localStorage.getItem('potentialCandidates') || '[]');
     setSavedCandidates(saved);
-  }, []); // Empty dependency array ensures it runs only once when the component mounts
+  }, []); 
 
   return (
     <div>
