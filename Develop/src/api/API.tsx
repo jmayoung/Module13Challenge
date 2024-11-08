@@ -11,7 +11,6 @@ const searchGithub = async () => {
       }
     );
     console.log("GitHub Token:", import.meta.env.VITE_GITHUB_TOKEN);
-    console.log("Test Variable:", import.meta.env.VITE_TEST_VARIABLE);
     ///console.log('Response:', response);
     const data = await response.json();
     if (!response.ok) {
